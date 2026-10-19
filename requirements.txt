@@ -1,0 +1,23 @@
+# Python 3.8 (see environment.yml)
+torch==2.3.0
+torchvision==0.18.0
+# the vendored ALBEF/BLIP/X-VLM text encoders do not import under transformers>=5
+transformers==4.28.1
+timm==0.6.13
+ruamel.yaml==0.15.80
+ftfy==6.1.1
+regex==2024.7.24
+pillow==10.4.0
+numpy==1.24.4
+tqdm==4.66.4
+# MiniBatchKMeans in retuap_targets.py (1.3.2 is the last release for Python 3.8)
+scikit-learn==1.3.2
+# imported at module load by models/xvlm_model/swin_transformer.py
+scipy==1.10.1
+# imported at module load by models/blip_model/vit.py
+fairscale==0.4.13
+# xlsx result files of eval.py (pd.ExcelWriter with the openpyxl engine)
+pandas==2.0.3
+openpyxl==3.1.5
+# models/clip_model/clip.py imports pkg_resources, which setuptools>=81 removes
+setuptools<81
